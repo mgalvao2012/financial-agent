@@ -1,0 +1,8 @@
+pydantic-ai>=0.0.14
+pydantic-ai[google]>=0.0.14
+pydantic>=2.0.0
+openai>=1.0.0
+python-dotenv>=1.0.0
+asyncio>=3.4.3
+httpx>=0.24.0
+nest_asyncio>=1.6.0
