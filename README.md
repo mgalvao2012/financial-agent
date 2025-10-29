@@ -2,7 +2,7 @@
 
 A production-ready AI agent system built with PydanticAI and Google Gemini that performs parallel financial analysis to generate hyperpersonalized customer messaging. The system uses deterministic parallel execution across four specialized agents to analyze financial situations, identify life moments, determine communication preferences, and recommend next best actions.
 
-![Solution Architecture](images/solution-diagram.png)
+<img width="878" height="574" alt="image" src="https://github.com/user-attachments/assets/85b6fffc-c9f9-442e-bcd2-b38538d0b7c0" />
 
 ## 🎯 Overview
 
