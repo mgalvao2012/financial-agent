@@ -12,7 +12,6 @@ This system implements a **fan-out, fan-in** architecture pattern where customer
 
 -   ✅ **Parallel Agent Execution** - Four agents run concurrently using `asyncio.gather()` for optimal performance
 -   ✅ **Type-Safe with Pydantic** - All inputs and outputs validated with Pydantic models
--   ✅ **Automatic Retry Logic** - Exponential backoff with jitter for handling API failures
 -   ✅ **Structured Outputs** - Strongly-typed agent responses for reliable data flow
 -   ✅ **Google Gemini 2.5 Flash-Lite** - Low-latency, cost-efficient LLM for real-time processing
 -   ✅ **Dependency Injection** - Clean architecture with shared context across agents
@@ -54,12 +53,10 @@ financial_agents/
 │   ├── channel_analyzer.py     # Channel preference agent
 │   ├── next_best_action.py     # Next best action recommendation agent
 │   └── synthesis_agent.py      # Message synthesis and aggregation agent
-├── dependencies/
-│   ├── __init__.py
-│   └── customer_deps.py        # Dependency injection configuration
-└── config/
+└── dependencies/
     ├── __init__.py
-    └── retry_config.py         # Retry logic with exponential backoff
+    └── customer_deps.py        # Dependency injection configuration
+
 ```
 
 ## 🚀 Getting Started
@@ -241,20 +238,6 @@ Supported models:
 -   `google-gla:gemini-2.0-flash-thinking` (enhanced reasoning capabilities)
 -   `google-gla:gemini-1.5-pro` (highest quality)
 
-### Retry Configuration
-
-Adjust retry behavior in `config/retry_config.py`:
-
-```python
-await retry_with_backoff(
-    func,
-    max_retries=5,           # Maximum retry attempts
-    initial_delay=2.0,       # Initial delay in seconds
-    max_delay=60.0,          # Maximum delay cap
-    exponential_base=2.0     # Exponential backoff multiplier
-)
-```
-
 ### Disable Thinking Mode
 
 Thinking mode is disabled by default to avoid `MALFORMED_FUNCTION_CALL` errors. To enable:
@@ -340,7 +323,6 @@ logging.basicConfig(level=logging.DEBUG)
 
 -   **Parallel Execution**: 4 agents run concurrently, reducing total execution time by ~75%
 -   **Gemini 2.5 Flash-Lite**: Sub-second response times for most requests
--   **Retry Logic**: Automatic handling of transient failures without manual intervention
 -   **Token Efficiency**: 1M token context window supports extensive customer history
 
 ### Expected Execution Times
@@ -363,6 +345,7 @@ python3 main.py
 
 ## 🛣️ Roadmap
 
+-   [ ] Add Retry Logic with Exponential Backoff
 -   [ ] Add database integration for customer data persistence
 -   [ ] Implement caching layer for repeat customer analysis
 -   [ ] Add A/B testing framework for message variants
