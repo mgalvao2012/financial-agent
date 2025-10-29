@@ -185,15 +185,34 @@ Processing customer: CUST_12345
 ============================================================
 
 🔄 Running parallel analysis agents...
+13:26:20.224 financial_analyzer run
+13:26:20.248 life_moment_agent run
+13:26:20.251 channel_agent run
+13:26:20.254 nba_agent run
+             financial_analyzer run
+13:26:20.261   chat gemini-2.5-flash-lite
+             life_moment_agent run
+13:26:20.265   chat gemini-2.5-flash-lite
+             nba_agent run
+13:26:20.271   chat gemini-2.5-flash-lite
+             channel_agent run
+13:26:20.285   chat gemini-2.5-flash-lite
+             financial_analyzer run
+13:26:21.917   running 2 tools
+13:26:21.918     running tool: calculate_debt_ratio
+13:26:21.923     running tool: get_spending_pattern
+13:26:21.933   chat gemini-2.5-flash-lite
 ✅ Parallel analysis complete!
 
 📊 Analysis Results:
   Financial Health: good
-  Life Moments: New Parent, Medical Expenses
+  Life Moments: new child
   Best Channel: push_notification
-  Recommendation: Open a high-yield savings account for emergency fund
+  Recommendation: High-yield savings account
 
 ✍️  Generating hyperpersonalized message...
+13:26:23.321 synthesis_agent run
+13:26:23.330   chat gemini-2.5-flash-lite
 ✅ Message generation complete!
 
 ============================================================
@@ -201,17 +220,19 @@ Processing customer: CUST_12345
 ============================================================
 
 Channel: push_notification
-Subject: Building Your Family's Financial Security
+Subject: A special offer for new parents!
 
-Congratulations on your growing family! We noticed you've been managing
-medical expenses recently. Now is the perfect time to strengthen your
-financial foundation with a high-yield savings account designed for
-families like yours...
+Hi Jane, congratulations on your new baby! We know that with a new little one comes new expenses. To help you make the most of your healthy financial situation, we'd like to offer you a high-yield savings account. This account can help your savings grow faster, giving you more peace of mind as you manage increased living costs. Would you like to learn more about how you can earn more on your savings?
 
-Call to Action: Open your account in 3 minutes and start earning 4.5% APY
+Call to Action: Learn More
 
-Optimal Send Time: 7:00 PM
-Expected Engagement: 72.5%
+Optimal Send Time: evening, weekend
+Expected Engagement: 35.0%
+================================================================================
+start time: 2025-10-29 13:26:20.220782
+  end time: 2025-10-29 13:26:25.211780
+time spent: 0:00:04.990998
+================================================================================
 ```
 
 ## 🔧 Configuration
