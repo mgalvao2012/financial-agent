@@ -222,7 +222,10 @@ Processing customer: CUST_12345
 Channel: push_notification
 Subject: A special offer for new parents!
 
-Hi Jane, congratulations on your new baby! We know that with a new little one comes new expenses. To help you make the most of your healthy financial situation, we'd like to offer you a high-yield savings account. This account can help your savings grow faster, giving you more peace of mind as you manage increased living costs. Would you like to learn more about how you can earn more on your savings?
+Hi Jane, congratulations on your new baby! We know that with a new little one comes new expenses.
+To help you make the most of your healthy financial situation, we'd like to offer you a high-yield savings account.
+This account can help your savings grow faster, giving you more peace of mind as you manage increased living costs.
+Would you like to learn more about how you can earn more on your savings?
 
 Call to Action: Learn More
 
